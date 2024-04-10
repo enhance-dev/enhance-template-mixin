@@ -7,7 +7,10 @@ const TemplateMixin = (superclass) => class extends superclass {
     const templateName = `${this.tagName.toLowerCase()}-template`
     const template = document.getElementById(templateName)
     const html = this.html
-    const state = {}
+    const state = {
+      attrs:{},
+      store:{},
+    }
     if (template) {
       this.template = template
     }
